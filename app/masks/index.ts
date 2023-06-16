@@ -1,6 +1,7 @@
 import { Mask } from "../store/mask";
+import { DOC_MASKS } from "./doc";
 import { CN_MASKS } from "./cn";
-import { EN_MASKS } from "./en";
+// import { EN_MASKS } from "./en";
 
 import { type BuiltinMask } from "./typing";
 export { type BuiltinMask } from "./typing";
@@ -21,6 +22,9 @@ export const BUILTIN_MASK_STORE = {
   },
 };
 
-export const BUILTIN_MASKS: Mask[] = [...CN_MASKS, ...EN_MASKS].map((m) =>
+// export const BUILTIN_MASKS: Mask[] = [...CN_MASKS, ...EN_MASKS].map((m) =>
+//   BUILTIN_MASK_STORE.add(m),
+// );
+export const BUILTIN_MASKS: Mask[] = [...DOC_MASKS].map((m) =>
   BUILTIN_MASK_STORE.add(m),
 );
