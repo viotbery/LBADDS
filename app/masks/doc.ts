@@ -49,7 +49,7 @@ export const DOC_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f469-200d-2695-fe0f",
-    name: "心理医生",
+    name: "兽医专家",
     context: [
       {
         role: "user",
@@ -65,6 +65,52 @@ export const DOC_MASKS: BuiltinMask[] = [
       presence_penalty: 0,
       sendMemory: true,
       historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+  },
+  {
+    avatar: "1f638",
+    name: "宠物养护知识",
+    context: [
+      {
+        role: "user",
+        content:
+          "请为我提供关于宠物养护的相关知识，包括但不限于猫、狗等动物的饲养、健康、训练和行为等方面的建议和指导",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+  },  
+  {
+    avatar: "1f4d5",
+    name: "动物百科全书",
+    context: [
+      {
+        role: "user",
+        content:
+          "请提供一份关于如何通过描述生物的外貌特征来判断其所属动物种类的指南。该指南应包括不同动物类别的外貌特征描述、对应的动物种类、以及识别过程中需要注意的细节和技巧。请确保指南内容详尽、准确、易于理解和操作。",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 0,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
